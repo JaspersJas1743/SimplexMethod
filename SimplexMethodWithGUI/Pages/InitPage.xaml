@@ -1,0 +1,25 @@
+﻿<Page x:Class="SimplexMethodWithGUI.Pages.InitPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimplexMethodWithGUI.Pages"
+      mc:Ignorable="d" Width="300" Height="130"
+      Title="InitPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Количество переменных: " FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0"></TextBlock>
+        <TextBox Name="CountVariables" MaxLength="1"  Grid.Column="1" Grid.Row="0" Height="28" Width="35" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></TextBox>
+        <TextBlock Text="Количество ограничений: " FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1"></TextBlock>
+        <TextBox Name="CountConstraints" MaxLength="1" Grid.Column="1" Grid.Row="1" Height="28" Width="35" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></TextBox>
+        <Button Grid.Row="2" Grid.Column="1" Height="20" Width="60" Content="Далее" Click="Button_Click"></Button>
+    </Grid>
+</Page>

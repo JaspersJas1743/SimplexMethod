@@ -1,0 +1,40 @@
+﻿<Page x:Class="SimplexMethodWithGUI.Pages.CalculationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimplexMethodWithGUI.Pages"
+      mc:Ignorable="d" MinHeight="250" MinWidth="400"
+      Title="CalculationPage">
+
+    <Grid Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.25*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.15*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.15*"></ColumnDefinition>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="F(x) = " VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" />
+        <TextBlock Text="Ограничения" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="270"/>
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <UniformGrid Name="GridForFunction" Grid.Column="1" Grid.Row="0" />
+        <UniformGrid Grid.Row="1" Grid.Column="1" Name="GridForConstraints"/>
+        <UniformGrid Name="GridForSign" Grid.Column="2" Grid.Row="1"/>
+        <UniformGrid Name="GridForResults" Grid.Column="3" Grid.Row="1"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="->" FontSize="20" TextAlignment="Center" VerticalAlignment="Center" />
+        <ComboBox Grid.Row="0" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <ComboBoxItem Content="Min" Selected="MinSelected"  />
+            <ComboBoxItem Content="Max" Selected="MaxSelected" IsSelected="True"/>
+        </ComboBox>
+        <Button Grid.Row="3" Grid.Column="1" Content="Вычислить" Click="GetResultClick"/>
+        <Button Grid.Column="3" Grid.Row="3" Content="Назад" Click="PreviousPageClick" />
+    </Grid>
+</Page>
